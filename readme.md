@@ -1,6 +1,6 @@
 # CSCI 3132 Group Project
 
-Create a game in c++
+Create a text-based console I/O game in c++
 
 ## Compile
 - Run `g++ src/*.cpp`
