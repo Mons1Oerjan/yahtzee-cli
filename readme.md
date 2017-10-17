@@ -1,9 +1,9 @@
-# CSCI 3132 Group Project
+# CSCI 3132 Group Project: Yahtzee
 
-Create a text-based console I/O game in c++
+Yahtzee text-based console I/O game in c++
 
 ## Compile
-- Run `g++ src/*.cpp`
+- Run `make` or `make all`
 
 ## Run Program
 - Run `./a.out`
