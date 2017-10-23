@@ -1,6 +1,9 @@
 #include "Player.h"
 
-// Constructor
+/*
+Players class to store name of the platers
+*/
+// Constructor takes two strings as id and name
 Player::Player(int id, string name) {
     this->id = id;
     this->name = name;
@@ -10,7 +13,7 @@ Player::Player(int id, string name) {
 Player::~Player() {
 
 }
-
+// returns name
 string Player::getName() {
     return this->name;
 }
