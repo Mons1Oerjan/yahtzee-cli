@@ -10,3 +10,9 @@
 #include "Rules.h"
 #include "Player.h"
 using namespace std;
+
+// class Yahtzee {
+//
+// };
+
+#endif
