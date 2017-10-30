@@ -1,3 +1,6 @@
+/*
+ * Players class to store name of the players
+ */
 #include "Player.h"
 
 // Constructor
