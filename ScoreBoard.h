@@ -11,7 +11,7 @@
 using namespace std;
 
 class ScoreBoard: Printable {
-	public:
+	private:
 		int *updates;
 		string nameOfPlayers[2];
 		string scoreLabels[14] = {
@@ -31,6 +31,7 @@ class ScoreBoard: Printable {
 			"YAHTZEE"
 		};
 		int** scores;
+	public:
 		ScoreBoard();
 		~ScoreBoard();
 		void setNamesOfPlayers(string p1, string p2);
@@ -39,6 +40,7 @@ class ScoreBoard: Printable {
 		int** getScore();
 		int* getUpdates();
 		int updateScore(int** data, int index);
+		int getScore(int player);
 };
 
 #endif

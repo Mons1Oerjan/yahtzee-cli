@@ -10,10 +10,11 @@
 using namespace std;
 
 class Rules {
+	private:
+		int** newBoard; // copies the current board to update if needed.
 	public:
 		Rules();
 		~Rules();
-		int** newBoard; // copies the current board to update if needed.
 		void copyBoard(int** board);
 		int** check(int** board, int** dice, int player);
 };

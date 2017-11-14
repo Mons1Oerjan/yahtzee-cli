@@ -114,11 +114,25 @@ int** ScoreBoard::getScore() {
 	return scores;
 }
 
+
 /*
  * returs the updated positions
  */
 int* ScoreBoard::getUpdates() {
 	return updates;
+}
+
+/*
+ * Returns the total score for the selected player
+ */
+int ScoreBoard::getScore(int player) {
+	int sum = 0;
+	
+	for (int i = 0; i < 14; i++) {
+		sum = sum + scores[i][player];
+	}
+	
+	return sum;
 }
 
 /*

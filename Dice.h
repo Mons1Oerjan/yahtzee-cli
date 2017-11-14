@@ -10,10 +10,11 @@
 using namespace std;
 
 class Dice: Printable {
+	private:
+		int** dices;
 	public:
 		Dice();
 		~Dice();
-		int** dices;
 		void rollDice();
 		void reserveDice(int index);
 		void reset();
