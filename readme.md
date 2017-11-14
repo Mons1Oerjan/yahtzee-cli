@@ -8,9 +8,6 @@ Yahtzee text-based console I/O game in c++
 ## Run Program
 - Run `./a.out`
 
-
-##Rules
-TO DO!
 ## Software Description
 ### Abstraction
 All these three classes below work as interfaces that interact with each other and only provide the data needed.
