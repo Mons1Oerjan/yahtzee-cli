@@ -30,7 +30,7 @@ Based on the explanation of Abstraction, the same classes are using encapsulatio
 
 ### Inheritance
 The `Printable` class is inherited by `Scoreboard` and `Dice`.
-TODO:: MOVE MAIN TO YAHTZEE, CREATE H AND CPP FILES, AND CREATE A GAMEON CLASS.
+Yahtzee class inherits from game class that keeps track of the total score and turns remaining. It also flags when the game is over.
 
 ### Polymorphism
 This can be seen in the Yahtzee class. In this class all previous named classes are used to provide logic to the game. In other words, in this class all the components come together and work logically.
