@@ -128,7 +128,7 @@ void yahtzee::playYathzee(){
     	    cin >> c;
 
             while (flag == 0) {
-		    if (strcmp(c, "R") == 0) {
+		        if (strcmp(c, "R") == 0) {
                     flag = 1;
                     rollTheDice(r, s, d, 2, checkTurn());
                     selectUpdate(r, s, d, checkTurn() % 2);
@@ -148,9 +148,9 @@ void yahtzee::playYathzee(){
             }
     	} else {
     	    // empty cin
-	    cin.clear();
-	    // flush
-	    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	        cin.clear();
+	        // flush
+	        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     	}
         d.reset();
     }
