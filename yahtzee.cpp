@@ -94,10 +94,10 @@ void yahtzee::selectUpdate(Rules& r, ScoreBoard& s, Dice& d, int player) {
 }
 
 void yahtzee::playYathzee(){
-	Rules r;
-	Dice d;
-	ScoreBoard s;
-	string player1_name;
+    Rules r;
+    Dice d;
+    ScoreBoard s;
+    string player1_name;
     string player2_name;
 
     cout << "Welcome to Yahtzee!" << endl;
@@ -113,7 +113,7 @@ void yahtzee::playYathzee(){
 
     setRounds(15);
 
-    while (gameOn()==1) {
+    while (gameOn() == 1) {
     	s.print();
     	cout << "Enter R to roll!!" << endl;
     	cin >> c;
@@ -121,46 +121,45 @@ void yahtzee::playYathzee(){
     	if (strcmp(c, "R") == 0) {
             int flag = 0;
             d.reset();
-    		d.rollDice();
-    		d.print();
-    		s.print(r.check(s.getScore(), d.getDices(), checkTurn() % 2));
-    		cout << "R to roll again, S to select a score." << endl;
-    		cin >> c;
+    	    d.rollDice();
+    	    d.print();
+    	    s.print(r.check(s.getScore(), d.getDices(), checkTurn() % 2));
+    	    cout << "R to roll again, S to select a score." << endl;
+    	    cin >> c;
 
             while (flag == 0) {
-        		if (strcmp(c, "R") == 0) {
+       		if (strcmp(c, "R") == 0) {
                     flag = 1;
                     rollTheDice(r, s, d, 2, checkTurn());
                     selectUpdate(r, s, d, checkTurn() % 2);
                     updateTurn();
-                    //turns++;
                 }
                 else if (strcmp(c, "S") == 0) {
                     flag = 1;
                     selectUpdate(r, s, d, checkTurn() % 2);
                     updateTurn();
-                    //turns++;
                 }
                 else {
                     cout << "R to roll again, S to select a score." << endl;
                     cin >> c;
                     cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(),'\n');
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
             }
     	} else {
-    		// empty cin
-			cin.clear();
-			// flush
-			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+    	    // empty cin
+	    cin.clear();
+	    // flush
+	    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     	}
         d.reset();
     }
     cout<<"THE WINNER IS: ";
-    if(getWinner()==0){
-        cout<<player1_name<<endl;
+
+    if(getWinner() == 0) {
+        cout << player1_name << endl;
     }
-    else{
-        cout<<player1_name<<endl;
+    else {
+        cout << player1_name << endl;
     }
 }
