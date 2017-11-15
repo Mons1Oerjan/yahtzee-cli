@@ -11,7 +11,7 @@ ScoreBoard::ScoreBoard() {
 	updates = new int[14]; // Keeps track of the positions available for the player
 
 	// allocate memory:
-	for(int i = 0; i < 14; i++) {
+	for (int i = 0; i < 14; i++) {
 		scores[i] = new int[2];
 		scores[i][0] = 0;
 		scores[i][1] = 0;
@@ -47,7 +47,7 @@ void ScoreBoard::print() {
  * Same format as print but extra update option.
  */
 void ScoreBoard::print(int** data) {
-	for (int i = 0; i< 2; i++) {
+	for (int i = 0; i < 2; i++) {
 		if (i == 0) {
 			printf("%20s", "");
 		}
@@ -127,11 +127,11 @@ int* ScoreBoard::getUpdates() {
  */
 int ScoreBoard::getScore(int player) {
 	int sum = 0;
-	
+
 	for (int i = 0; i < 14; i++) {
 		sum = sum + scores[i][player];
 	}
-	
+
 	return sum;
 }
 

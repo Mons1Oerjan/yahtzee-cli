@@ -8,6 +8,7 @@ using namespace std;
 Rules::Rules() {
 	// allocate memory for the updated scoreboard:
 	newBoard = new int*[14];
+
 	for (int i = 0; i < 14; i++) {
 		newBoard[i] = new int[2];
 		newBoard[i][0] = 0;
