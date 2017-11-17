@@ -42,7 +42,7 @@ class Game {
 
 		// returns 1 while there are turns remaining
 		int gameOn() {
-			if (turn > totalTurns) {
+			if (turn >= totalTurns) {
 				return 0;
 			} else {
 				return 1;
@@ -61,7 +61,7 @@ class Game {
 
 		// returns the winner and prints the points
 		int getWinner() {
-			cout << "POINTS: " << winnerScore << endl;
+			cout << winnerScore << " POINTS" <<endl;
 			return winnerId;
 		}
 };
