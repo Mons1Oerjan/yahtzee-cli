@@ -45,7 +45,7 @@ int** Rules::check(int** board, int** dice, int player) {
 	// checks for large straight and update kinds
 	for (int i = 0; i < 6; i++) {
 		// checks for bonus sum
-		bonusSum += board[1][player];
+		bonusSum += board[i][player];
 
 		// checks for lower bound prizes
 		if (newBoard[i][player] == 0 && kinds[i] >= 0) {
@@ -67,12 +67,12 @@ int** Rules::check(int** board, int** dice, int player) {
 		}
 
 		// checks 3 of a kind
-		if (kinds[i] == 3 && newBoard[7][player] == 0) {
+		if (kinds[i] >= 3 && newBoard[7][player] == 0) {
 			newBoard[7][player] = sum;
 		}
 
 		// checks 4 of a kind
-		if (kinds[i] == 4 && newBoard[8][player] == 0) {
+		if (kinds[i] >= 4 && newBoard[8][player] == 0) {
 			newBoard[8][player] = sum;
 		}
 
@@ -87,7 +87,7 @@ int** Rules::check(int** board, int** dice, int player) {
 		// checks for fullhouse.
 		if (kinds[i] == 2 && newBoard[9][player] == 0) {
 			for (int j = 0; j < 5; j++) {
-				if (kinds[i] == 3) {
+				if (kinds[j] == 3) {
 					newBoard[9][player] = 25;
 				}
 			}
@@ -95,8 +95,8 @@ int** Rules::check(int** board, int** dice, int player) {
 	}
 
 	// updates lower bonus if needed directly on the board
-	if (bonusSum >= 35) {
-		board[7][player] = 35;
+	if (bonusSum >= 63) {
+		board[6][player] = 35;
 	}
 
 	return newBoard;

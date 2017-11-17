@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
+#include <limits>
 #include "Dice.h"
 #include "ScoreBoard.h"
 #include <string.h>
@@ -22,6 +23,9 @@ void yahtzee::rollTheDice(Rules& r, ScoreBoard& s, Dice& d, int rollsLeft, int t
         cin.ignore();
         cin.getline(pch, 10);
         d.reset();
+        for (int i = 0; i < 5; i++) {
+            keeper[i] = 0; //Reset the keeper
+        }
 
         for (int i = 0; i < 10; i++) {
             if (pch[i] >= 49 && pch[i] <= 53) {
@@ -111,7 +115,7 @@ void yahtzee::playYathzee(){
     Player p2(2, player2_name);
     s.setNamesOfPlayers(player1_name, player2_name);
 
-    setRounds(15);
+    setRounds(num_of_players*15);
 
     while (gameOn() == 1) {
     	s.print();
@@ -160,6 +164,6 @@ void yahtzee::playYathzee(){
         cout << player1_name << endl;
     }
     else {
-        cout << player1_name << endl;
+        cout << player2_name << endl;
     }
 }

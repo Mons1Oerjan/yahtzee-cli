@@ -42,7 +42,7 @@ class Game {
 
 		// returns 1 while there are turns remaining
 		int gameOn() {
-			if (turn > totalTurns) {
+			if (turn >= totalTurns) {
 				return 0;
 			} else {
 				return 1;
