@@ -61,7 +61,7 @@ class Game {
 
 		// returns the winner and prints the points
 		int getWinner() {
-			cout << "POINTS: " << winnerScore << endl;
+			cout << winnerScore << " POINTS" <<endl;
 			return winnerId;
 		}
 };
