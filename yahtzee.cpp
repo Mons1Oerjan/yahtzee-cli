@@ -158,7 +158,7 @@ void yahtzee::playYathzee(){
     	}
         d.reset();
     }
-    cout<<"THE WINNER IS: ";
+    cout<<"THE WINNER WITH ";
 
     if(getWinner() == 0) {
         cout << player1_name << endl;
